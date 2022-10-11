@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using DiscussionForum.Models;
 
 namespace DiscussionForum.Areas.Identity.Data;
 
@@ -22,6 +23,8 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
         builder.ApplyConfiguration(new ApplicationUserEntityConfiguration());
     }
+
+    public DbSet<DiscussionForum.Models.DiscussionModel> DiscussionModel { get; set; }
 }
 
 public class ApplicationUserEntityConfiguration : IEntityTypeConfiguration<ApplicationUser>
