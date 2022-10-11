@@ -16,3 +16,10 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.menu {
+    display: table;
+    padding-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+}
